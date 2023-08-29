@@ -8,12 +8,69 @@ GitHub. HW_2
 - Charles
 - Mobile testing
 
+$ git checkout -b Postman
+$ git checkout -b Jmeter
+$ git checkout -b CheckLists
+$ git checkout -b Bag_Reports
+$ git checkout -b SQL
+$ git checkout -b Charles
+$ git checkout -b Mobile_testing
+
+
 2. Запушить все ветки на внешний репозиторий
+$ git push --all
+
 3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+$ git switch Bugreports
+$ cat > bugreport.txt
+	Id: 01;
+	Title: The "Conacts" button on the main page in the footer;
+	Steps:  1. Go to the main page of website by link https://testsite.com";
+	        2. Scrolldown the main page till end of page";
+	        3. Click the "Contacts" button;
+	Expected_result: Contact page opens;
+	Actual_result: The transition to the contact page did not take place;
+	Environment: 
+	        OS: Windows 10;
+	        Browser: Chrome 115.0.5790.173;
+	Severity: Minor;
+	Priority: Medium;
+	Attachments: http://screenshots.com/myscreenshot.png .
+
 4. Запушить структуру багрепорта на внешний репозиторий
+$ git add .
+$ git commit -m "message"
+$ git push
+
 5. Вмержить ветку Bag Reports в Main
+$ git switch main
+$ git merge Bugreports
+
 6. Запушить main на внешний репозиторий.
+$ git push
+
 7. В ветке CheckLists набросать структуру чек листа.
+$ git switch Checklists
+$ cat > checklist.txt
+ID
+Title
+Description
+Precondition
+Steps
+Expected result
+Actual result
+Postcondition
+Priority
+Severity
+Environment
+Attach
+
+
 8. Запушить структуру на внешний репозиторий
+$ git push -u origin Checklists
+
 9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+
 10. Синхронизировать Внешнюю и Локальную ветки Main
+$ git switch main
+$ git pull
