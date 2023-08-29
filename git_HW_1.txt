@@ -14,59 +14,290 @@ GIT Homework 1
 
 JSON
  4. Создать внешний репозиторий c названием JSON.
+
  5. Клонировать репозиторий JSON на локальный компьютер.
+$ git clone https://github.com/vpg10/JSON.git
+
  6. Внутри локального JSON создать файл “new.json”.
+$ cd JSON
+$ touch new.json
+
  7. Добавить файл под гит.
+$ git add new.json
+
  8. Закоммитить файл.
+$ git commit -m "new.json added"
+
  9. Отправить файл на внешний GitHub репозиторий.
+$ git push
+
  10. Отредактировать содержание файла “new.json” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON.
+$ cat > new.json
+{
+	"name" : "Konstantin Dmitriev",
+	"age" : 38,
+	"pets_qty" : 1,
+	"f_salary" : "4000 eur"
+}
+
  11. Отправить изменения на внешний репозиторий.
+$ git commit -am "new.json changed"
+$ git push
+
  12. Создать файл preferences.json
+$ touch preferences.json
+
  13. В файл preferences.json добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате JSON.
- 14. Создать файл sklls.json добавить информацию о скиллах которые будут изучены на курсе в формате JSON
+$ cat > preferences.json
+{
+	"favorite_move" : "The_silence_of_the_lambs",
+	"favorite_series" : "Westworld",
+	"favorite_food" : "meet",
+	"favorite_time_of_year" : "winter",
+	"country_i_want_to_visit" : "Iceland"
+}
+
+ 14. Создать файл skills.json добавить информацию о скиллах которые будут изучены на курсе в формате JSON
+cat > skills.json
+{
+	"skill_1" : "GIT",
+	"skill_2" : "Linux_terminal",
+	"skill_3" : "Postman",
+	"skill_4" : "SQL",
+	"skill_5" : "DevTools",
+	"skill_6" : "Pyton",
+	"skill_7" : "PyCharm",
+	"skill_8" : "Charles",
+	"skill_9" : "Fidler",
+	"skill_10" : "Android_Studio",
+	"skill_11" : "DBeaver",
+	"skill_12" : "VSCode"
+}
+
  15. Отправить сразу 2 файла на внешний репозиторий.
+$ git add .
+$ git commit -m "new files added"
+$ git push
+
  16. На веб интерфейсе создать файл bug_report.json.
+button -> Add_file > Create_new_file - bug_report.json
+
  17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+button -> Commit_changes... > Commit_changes
+
  18. На веб интерфейсе модифицировать файл bug_report.json, добавить баг репорт в формате JSON.
+{
+	"Id" : "01",
+	"Title" : "The "Conacts" button on the main page in the footer"
+	"Steps" :
+	{
+		"1. Go to the main page of website by link https://testsite.com",
+		"2. Scrolldown the main page till end of page",
+		"3. Click the "Contacts" button
+	}
+	"Expected_result" : "Contact page opens",
+	"Actual_result" : " The transition to the contact page did not take place",
+	"Environment" : 
+	{
+		"OS" : "Windows 10",
+		"Browser" : "Chrome 115.0.5790.173"
+	}
+	"Severity" : "Minor",
+	"Priority" : "Medium",
+	"Attachments" : "http://screenshots.com/myscreenshot.png"
+}
+		
+	
  19. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+button -> Commit_changes... > Commit_changes
+
  20. Синхронизировать внешний и локальный репозиторий JSON
+$ git pull
 
 
 XML
  21. Создать внешний репозиторий c названием XML.
+
  22. Клонировать репозиторий XML на локальный компьютер.
+$ git clone https://github.com/vpg10/XML
+
  23. Внутри локального XML создать файл “new.xml”.
+$ touch new.xml
+
  24. Добавить файл под гит.
+$ git add new.xml
+
  25. Закоммитить файл.
+$ git commit -m "new.xml added"
+
  26. Отправить файл на внешний GitHub репозиторий.
+$ git push
+
  27. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML.
+<?xml version="1.0" encoding="UTF-8"?>
+<info>
+	<name>Konstantin</name>
+	<age>38</age>
+	<pets>1</pets>
+	<exp_salary>500000</exp_salary>
+</info>
+
  28. Отправить изменения на внешний репозиторий.
+$ git commit -am "update new.xml"; git push
+
  29. Создать файл preferences.xml
+$ touch preferences.xml
+
  30. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML.
+vim preferences.xml
+insert
+<?xml version="1.0" encoding="UTF-8"?>
+<pref>
+	<fav_move>The_silence_of_the_lambs</fav_move>
+	<fav_series>Westworld</fav_series>
+	<fav_food>meet</fav_food>
+	<fav_time_of_year>winter</fav_time_of_year>
+	<want_to_visit>Iceland</want_to_visit>
+</pref>
+
  31. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML
+$ vim skills.json
+insert
+<?xml version="1.0" encoding="UTF-8"?>
+<skills>
+	<skill_1>GIT</skill_1>
+	<skill_2>Linux_terminal</skill_2>
+	<skill_3>Postman</skill_3>
+	<skill_4>SQL</skill_4>
+	<skill_5>DevTools</skill_5>
+	<skill_6>Pyton</skill_6>
+	<skill_7>PyCharm</skill_7>
+	<skill_8>Charles</skill_8>
+	<skill_9>Fidler</skill_9>
+	<skill_10>Android_Studio</skill_10>
+	<skill_11>DBeaver</skill_11>
+	<skill_12>VSCode</skill_12>
+</skills>
+
+
  32. Сделать коммит в одну строку.
+$ git add .; git commit -m "new files added"
+
  33. Отправить сразу 2 файла на внешний репозиторий.
+$ git push
+
  34. На веб интерфейсе создать файл bug_report.xml.
+
  35. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+
  36. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML.
+<?xml version="1.0" encoding="UTF-8"?>
+<bug_report>
+  <Id>01</Id>
+  <Title>The \"Conacts\" button on the main page in the footer</Title>
+	<Steps>
+    <step_1>1. Go to the main page of website by link https://testsite.com</step_1>
+		<step_2>2. Scrolldown the main page till end of page</step_2>
+		<step_3>3. Click the \"Contacts\" button</step_3>
+  </Steps>
+	<Expected_result>Contact page opens</Expected_result>
+	<Actual_result>The transition to the contact page did not take place</Actual_result>
+	<Environment>
+    <OS>Windows 10</OS>
+		<Browser>Chrome 115.0.5790.173</Browser>
+  </Environment>
+	<Severity>Minor</Severity>
+	<Priority>Medium</Priority>
+	<Attachments>http://screenshots.com/myscreenshot.png</Attachments>
+</bug_report>
+
  37. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+
  38. Синхронизировать внешний и локальный репозиторий XML
+$ git pull
+
 TXT
  1. Создать внешний репозиторий c названием TXT.
+
  2. Клонировать репозиторий TXT на локальный компьютер.
+$ git clone https://github.com/vpg10/TXT.git
  3. Внутри локального TXT создать файл “new.txt”.
+$ touch new.txt
+
  4. Добавить файл под гит.
+$ git add new.txt
+
  5. Закоммитить файл.
+$ git commit -m "new.txt created"
+ 
  6. Отправить файл на внешний GitHub репозиторий.
+$ git push
+
  7. Отредактировать содержание файла “new.txt” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате TXT.
+$ cat >> new.txt	
+name : Konstantine Dmitriev;
+age : 38;
+pets_qty : 1;
+f_salary : 4000 eur.
+
  8. Отправить изменения на внешний репозиторий.
+$ git commit -am "new.txt updated"; git push
+
  9. Создать файл preferences.txt
+$ touch preferences.txt
+
  10. В файл preferences.txt” добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате TXT.
+$ vim preferences.txt
+favorite_move: The_silence_of_the_lambs;
+favorite_series: Westworld;
+favorite_food: meet;
+favorite_time_of_year: winter;
+country_i_want_to_visit: Iceland.
+
  11. Создать файл sklls.txt добавить информацию о скиллах которые будут изучены на курсе в формате TXT
+$ vim skills.txt
+skill_1: GIT;
+skill_2: Linux_terminal;
+skill_3: Postman;
+skill_4: SQL;
+skill_5: DevTools;
+skill_6: Pyton;
+skill_7: PyCharm;
+skill_8: Charles;
+skill_9: Fidler;
+skill_10: Android_Studio;
+skill_11: DBeaver;
+skill_12: VSCode.
+
+
  12. Сделать коммит в одну строку.
+$ git add .; git commit -m "preferences.txt and skills.txt uploaded"
+
  13. Отправить сразу 2 файла на внешний репозиторий.
+$ git push
+
  14. На веб интерфейсе создать файл bug_report.txt.
+add file > create new file
+bug_report.txt
+
  15. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+
  16. На веб интерфейсе модифицировать файл bug_report.txt, добавить баг репорт в формате TXT.
+Id: 01;
+Title: The "Conacts" button on the main page in the footer;
+Steps:  1. Go to the main page of website by link https://testsite.com";
+        2. Scrolldown the main page till end of page";
+        3. Click the "Contacts" button;
+Expected_result: Contact page opens;
+Actual_result: The transition to the contact page did not take place;
+Environment: 
+        OS: Windows 10;
+        Browser: Chrome 115.0.5790.173;
+Severity: Minor;
+Priority: Medium;
+Attachments: http://screenshots.com/myscreenshot.png.
+
  17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+
  18. Синхронизировать внешний и локальный репозиторий TXT
+$ git pull
