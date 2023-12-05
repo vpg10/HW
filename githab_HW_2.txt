@@ -16,6 +16,10 @@ $ git checkout -b SQL
 $ git checkout -b Charles
 $ git checkout -b Mobile_testing
 
+########### или все то же самое но коммандой switch
+$ git switch -c Postman
+
+
 
 2. Запушить все ветки на внешний репозиторий
 $ git push --all
